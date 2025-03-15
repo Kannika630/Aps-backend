@@ -6,14 +6,7 @@ app.use(cors())
 
 
 app.post("/login",(req,res)=>{
-    const username = req.body.username;
-    const userDetails = new User({
-        username:username
-    })
-    userDetails.save()
-    .then(()=>{res.send("success")})
-    .catch(()=>{res.send("didnt save")})
-    
+   res.send("success")
 })
 
 app.listen(3000,(req,res)=>{
